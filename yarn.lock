@@ -1449,9 +1449,9 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@supabase/gotrue-js@^1.17.0":
-  version "1.17.0"
-  resolved "https://registry.npmjs.org/@supabase/gotrue-js/-/gotrue-js-1.17.0.tgz"
+"@supabase/gotrue-js@^1.17.1":
+  version "1.17.1"
+  resolved "https://registry.yarnpkg.com/@supabase/gotrue-js/-/gotrue-js-1.17.1.tgz#25e803b111f39ddd62ab882a0b3685240d27a745"
   dependencies:
     cross-fetch "^3.0.6"
 
@@ -1474,11 +1474,11 @@
   dependencies:
     cross-fetch "^3.1.0"
 
-"@supabase/supabase-js@^1.22.4":
-  version "1.22.4"
-  resolved "https://registry.npmjs.org/@supabase/supabase-js/-/supabase-js-1.22.4.tgz"
+"@supabase/supabase-js@^1.22.5":
+  version "1.22.5"
+  resolved "https://registry.yarnpkg.com/@supabase/supabase-js/-/supabase-js-1.22.5.tgz#ef0faa1d219a3202c11ee561c934a452779eb68c"
   dependencies:
-    "@supabase/gotrue-js" "^1.17.0"
+    "@supabase/gotrue-js" "^1.17.1"
     "@supabase/postgrest-js" "^0.33.3"
     "@supabase/realtime-js" "^1.1.3"
     "@supabase/storage-js" "^1.4.0"
