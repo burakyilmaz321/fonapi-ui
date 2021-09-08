@@ -23,7 +23,9 @@ export default {
       .select('*')
       .eq('code', this.$route.params.code)
     if (error) {
-      return
+      this.fund = {
+        code: 'error', title: 'error'
+      }
     }
     this.fund = funds[0]
   }
