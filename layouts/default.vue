@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>Fonapi</h1>
+    <SearchBar />
+    <SearchResults />
     <Nuxt />
   </div>
 </template>

@@ -1,7 +1,3 @@
 <template>
-  <input type="text" name="search">
+  <div />
 </template>
-
-<script>
-export default {}
-</script>

@@ -1,33 +1,28 @@
 <template>
-  <p>{{ fund.code }} - {{ fund.title }}</p>
+  <div>
+    <h1>{{ fund.code }} - {{ fund.title }}</h1>
+    <p>{{ fund.price_history }}</p>
+  </div>
 </template>
 
 <script>
-import { createClient } from '@supabase/supabase-js'
+import { FundService } from '@/utils/services'
+
 export default {
   data () {
     return {
       fund: {
-        code: 'TCD',
-        title: 'TACİRLER ASSET MANAGEMENT VARIABLE FUND'
+        code: '',
+        title: '',
+        price_history: []
       }
     }
   },
   async fetch () {
-    const supabase = createClient(
-      process.env.SUPABASE_URL,
-      process.env.SUPABASE_KEY
-    )
-    const { data: funds, error } = await supabase
-      .from('funds')
-      .select('*')
-      .eq('code', this.$route.params.code)
-    if (error) {
-      this.fund = {
-        code: 'error', title: 'error'
-      }
+    const fund = await FundService.getFund(this.$route.params.code)
+    if (fund) {
+      this.fund = fund
     }
-    this.fund = funds[0]
   }
 }
 </script>

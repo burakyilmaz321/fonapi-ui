@@ -1506,6 +1506,7 @@
 "@supabase/supabase-js@^1.24.0":
   version "1.24.0"
   resolved "https://registry.yarnpkg.com/@supabase/supabase-js/-/supabase-js-1.24.0.tgz#0a0e034b0d32dd239d73878c1195c506e4c6a067"
+  integrity sha512-/gM9+mSqmftHF8pzWzb+etQOvVSLT1cDrlvIL6LZSNrlv+ZRij8QAXnX9JGiUh0lNq046ZtrJThxys01P2TJSA==
   dependencies:
     "@supabase/gotrue-js" "^1.18.0"
     "@supabase/postgrest-js" "^0.34.0"
