@@ -26,7 +26,8 @@ export default {
     }
   },
   async fetch () {
-    const funds = await FundService.getAllFunds(this.searchQuery)
+    const fundService = new FundService(this.$supabase)
+    const funds = await fundService.getAllFunds(this.searchQuery)
     this.funds = funds
   },
   computed: {

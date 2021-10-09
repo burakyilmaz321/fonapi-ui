@@ -19,7 +19,8 @@ export default {
     }
   },
   async fetch () {
-    const fund = await FundService.getFund(this.$route.params.code)
+    const fundService = new FundService(this.$supabase)
+    const fund = await fundService.getFund(this.$route.params.code)
     if (fund) {
       this.fund = fund
     }

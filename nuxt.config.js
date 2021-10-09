@@ -19,6 +19,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/supabaseClient.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -53,7 +54,9 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  privateRuntimeConfig: {
+
+  // Runtime configuration
+  publicRuntimeConfig: {
     supabaseUrl: process.env.SUPABASE_URL,
     supabaseKey: process.env.SUPABASE_KEY
   }

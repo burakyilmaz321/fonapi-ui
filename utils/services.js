@@ -1,18 +1,19 @@
-import { supabase } from './supabaseClient'
-
 class FundService {
   /**
   * Interact with supabase to get fund information
   */
+  constructor (supabaseClient) {
+    this.supabaseClient = supabaseClient
+  }
 
   /**
   * Get all funds
   * @param {string} pattern
   * @returns {Promise<any>}
   */
-  static async getAllFunds (pattern) {
+  async getAllFunds (pattern) {
     try {
-      const { data: funds, error } = await supabase
+      const { data: funds, error } = await this.supabaseClient
         .from('funds')
         .select('*')
         .or(`code.ilike.%${pattern}%,title.ilike.%${pattern}%`)
@@ -31,9 +32,9 @@ class FundService {
   * @param {string} code
   * @returns {Promise<any>}
   */
-  static async getFund (code) {
+  async getFund (code) {
     try {
-      const { data: funds, error } = await supabase
+      const { data: funds, error } = await this.supabaseClient
         .from('funds')
         .select(`
           code,
